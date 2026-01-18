@@ -1,8 +1,10 @@
 
-staticSites:
-  - name: church-event-manager
+services:
+  - type: web
+    name: church-event-manager
+    env: static
     buildCommand: npm install && npm run build
-    publishPath: dist
+    staticPublishPath: dist
     routes:
       - type: rewrite
         source: /*
